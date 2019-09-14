@@ -18,5 +18,15 @@ module.exports = Merge.smart(baseConfig, {
   devServer: {
     contentBase: path.join(__dirname, '../dist'),
     port: '3083',
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000/api',
+        pathRewrite: {
+          '^/api': ''
+        },
+        changeOrigin: true, // target是域名的话，需要这个参数，
+        secure: false, // 设置支持https协议的代理
+      },
+    }
   }
 })

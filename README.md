@@ -1,2 +1,4 @@
 # create-app-project
-the web basic architecture by webpack
+create by the create-app-project
+
+the zhihu front-end

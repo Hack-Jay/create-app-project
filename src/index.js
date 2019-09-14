@@ -1,9 +1,19 @@
-import React from 'react'
-import ReactDom from 'react-dom'
-import './index.less'
+import React, { useState, useEffect } from "react";
+import ReactDom from "react-dom";
+import axios from "axios";
+import "./index.less";
 
-const App = () => <h3>Hello React</h3>
-console.log(123)
+function App() {
+  const [list, setList] = useState([]);
 
-ReactDom.render(<App />, document.getElementById('root'))
+  useEffect(() => {
+    axios.get('/api')
+    .then((res) => {
+      console.log('res', res)
+    })
+  }, []);
 
+  return <h3>Hello React</h3>;
+}
+
+ReactDom.render(<App />, document.getElementById("root"));
