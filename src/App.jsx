@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
 import { ThemeProvider } from "@material-ui/styles";
 import reducer from './reducer';
+import Layout from './Layout'
 import Login from './views/Login'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -22,7 +23,7 @@ export default function App() {
         // theme={themeInstance}
     >
         <Provider store={store}>
-            <Login />
+            <Layout />
         </Provider>
     </ThemeProvider>
   );

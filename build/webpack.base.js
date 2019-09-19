@@ -25,10 +25,10 @@ module.exports = {
 			{
 		        test: /\.(png|svg|jpg|gif)$/,
 		        use: [
-					{
-						loader: 'file-loader',
-						options: {}
-					},
+						{
+							loader: 'file-loader',
+							options: {}
+						},
 					{
 						loader: 'image-webpack-loader',
 						options: {

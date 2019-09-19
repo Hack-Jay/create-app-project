@@ -18,6 +18,7 @@ module.exports = Merge.smart(baseConfig, {
   devServer: {
     contentBase: path.join(__dirname, '../dist'),
     port: '3083',
+    historyApiFallback: true,
     proxy: {
       '/api': {
         target: 'http://localhost:3000/api',
