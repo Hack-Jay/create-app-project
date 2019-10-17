@@ -26,10 +26,12 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => 
+  {
+  return ({
   '@global': {
     body: {
-      backgroundColor: theme.palette.common.white,
+      backgroundColor: theme.white,
     },
   },
   paper: {
@@ -40,7 +42,7 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.avatarColor,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -49,7 +51,9 @@ const useStyles = makeStyles(theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+})
+  }
+);
 
 export default function SignIn() {
   const classes = useStyles();
